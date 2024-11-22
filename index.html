@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixel War</title>
+    <link rel="stylesheet" href="pixel.css" />
+  </head>
+  <body>
+    <h1>Pixel War : Welcome</h1>
+    <header>
+      <div id="connection">
+        <input type="text" id="username" placeholder="Entrez votre pseudo" />
+        <button onclick="connect()">Se connecter</button>
+      </div>
+      <div id="connected-user" style="display: none">
+        <span>Connecté en tant que <span id="display-username"></span></span>
+        <button onclick="logout()">Déconnexion</button>
+      </div>
+    </header>
+    <main>
+      <div id="tools">
+        <label for="color">Choisissez une couleur :</label>
+        <input type="color" id="color" value="#000000" />
+      </div>
+      <canvas id="canvas" width="500" height="500"></canvas>
+      <div id="chat">
+        <input type="text" id="message" placeholder="Tapez un message" />
+        <button onclick="sendMessage()">Envoyer</button>
+        <ul id="messages"></ul>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
